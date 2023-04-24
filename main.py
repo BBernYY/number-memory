@@ -50,11 +50,8 @@ def main():
                 print("MASTERMIND")
             else:
                 print(f'ABSOLUTE BUFFOON --- IT WAS {num}, AND YOU SAID {ans} WHICH TRANSLATES TO {convert(ans)}')
-    for i in range(10000000):
-            if anti_convert(convert(i)) != i:
-                raise Exception("FAILED")
-    # while True:
-    #     trainer()
+    while True:
+        trainer()
 
 
 
