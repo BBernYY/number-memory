@@ -1,7 +1,6 @@
 def main():
-    import utils # imports my customized utils module, with a test and timing function. https://GitHub.com/BBernYY/FancyCoding
     import data
-    def weebify(num):
+    def convert(num):
         zeroes = len(str(num))+len(str(num))%2 # calculate zeroes before number
         num = str(num).zfill(zeroes) # add said zeroes
         newnum = []
@@ -22,10 +21,10 @@ def main():
         oldnum = random.randint(1, 10000) # select random number
         zeroes = len(str(oldnum))+len(str(oldnum))%2 # do the same zero calculation thing for the zeroes preview
         num = str(oldnum).zfill(zeroes)
-        if input(f"WHAT NUMBER IS {num} IN LETTERS?\nANSWER --> ") == weebify(num): # check if user responds correctly
+        if input(f"WHAT NUMBER IS {num} IN LETTERS?\nANSWER --> ") == convert(num): # check if user responds correctly
             print("MASTERMIND")
         else:
-            print(f'ABSOLUTE BUFFOON --- IT WAS {weebify(num)}')
+            print(f'ABSOLUTE BUFFOON --- IT WAS {convert(num)}')
     while True:
         trainer()
 
